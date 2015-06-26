@@ -18,6 +18,7 @@ namespace ConsoleApplication1
             DateTime dt = new DateTime(DateTime.Now.Year, 12, 1);
             Console.WriteLine(13 % 12);
             Console.ReadKey();
+            //ssss
         }
     }
 }
