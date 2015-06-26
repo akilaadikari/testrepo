@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Oac.IntegrationService.Contracts.Faults" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Oac.IntegrationService.Contracts.Faults" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="AuthenticationFailure">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Details" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Issue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AuthenticationFailure" nillable="true" type="tns:AuthenticationFailure" />
+  <xs:complexType name="ConnectionFailure">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Details" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Issue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConnectionFailure" nillable="true" type="tns:ConnectionFailure" />
+  <xs:complexType name="NoDataFound">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Details" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Issue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NoDataFound" nillable="true" type="tns:NoDataFound" />
+</xs:schema>

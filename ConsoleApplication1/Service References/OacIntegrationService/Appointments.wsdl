@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Appointments" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/OacIntegrationService/Appointments.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/OacIntegrationService/Appointments.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Oac.IntegrationService.Contracts.Faults" />
+      <xsd:import schemaLocation="http://localhost/OacIntegrationService/Appointments.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/OacIntegrationService/Appointments.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Oac.IntegrationService.Contracts.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAppointments_GetAppointmentsForOLTIntegration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppointmentsForOLTIntegration" />
+  </wsdl:message>
+  <wsdl:message name="IAppointments_GetAppointmentsForOLTIntegration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppointmentsForOLTIntegrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointments_GetAppointmentsForOLTIntegration_AuthenticationFailureFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Oac.IntegrationService.Contracts.Faults" name="detail" element="q1:AuthenticationFailure" />
+  </wsdl:message>
+  <wsdl:message name="IAppointments_GetAppointmentsForOLTIntegration_ConnectionFailureFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Oac.IntegrationService.Contracts.Faults" name="detail" element="q2:ConnectionFailure" />
+  </wsdl:message>
+  <wsdl:message name="IAppointments_GetAppointmentsForOLTIntegration_NoDataFoundFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Oac.IntegrationService.Contracts.Faults" name="detail" element="q3:NoDataFound" />
+  </wsdl:message>
+  <wsdl:message name="IAppointments_CheckIn_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckIn" />
+  </wsdl:message>
+  <wsdl:message name="IAppointments_CheckIn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckInResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointments_CheckIn_NoDataFoundFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Oac.IntegrationService.Contracts.Faults" name="detail" element="q4:NoDataFound" />
+  </wsdl:message>
+  <wsdl:message name="IAppointments_CheckIn_AuthenticationFailureFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Oac.IntegrationService.Contracts.Faults" name="detail" element="q5:AuthenticationFailure" />
+  </wsdl:message>
+  <wsdl:message name="IAppointments_CheckIn_ConnectionFailureFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Oac.IntegrationService.Contracts.Faults" name="detail" element="q6:ConnectionFailure" />
+  </wsdl:message>
+  <wsdl:message name="IAppointments_NoShow_InputMessage">
+    <wsdl:part name="parameters" element="tns:NoShow" />
+  </wsdl:message>
+  <wsdl:message name="IAppointments_NoShow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NoShowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointments_NoShow_AuthenticationFailureFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Oac.IntegrationService.Contracts.Faults" name="detail" element="q7:AuthenticationFailure" />
+  </wsdl:message>
+  <wsdl:message name="IAppointments_NoShow_ConnectionFailureFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Oac.IntegrationService.Contracts.Faults" name="detail" element="q8:ConnectionFailure" />
+  </wsdl:message>
+  <wsdl:message name="IAppointments_NoShow_NoDataFoundFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Oac.IntegrationService.Contracts.Faults" name="detail" element="q9:NoDataFound" />
+  </wsdl:message>
+  <wsdl:portType name="IAppointments">
+    <wsdl:operation name="GetAppointmentsForOLTIntegration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointments/GetAppointmentsForOLTIntegration" message="tns:IAppointments_GetAppointmentsForOLTIntegration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointments/GetAppointmentsForOLTIntegrationResponse" message="tns:IAppointments_GetAppointmentsForOLTIntegration_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAppointments/GetAppointmentsForOLTIntegrationAuthenticationFailureFault" name="AuthenticationFailureFault" message="tns:IAppointments_GetAppointmentsForOLTIntegration_AuthenticationFailureFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAppointments/GetAppointmentsForOLTIntegrationConnectionFailureFault" name="ConnectionFailureFault" message="tns:IAppointments_GetAppointmentsForOLTIntegration_ConnectionFailureFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAppointments/GetAppointmentsForOLTIntegrationNoDataFoundFault" name="NoDataFoundFault" message="tns:IAppointments_GetAppointmentsForOLTIntegration_NoDataFoundFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckIn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointments/CheckIn" message="tns:IAppointments_CheckIn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointments/CheckInResponse" message="tns:IAppointments_CheckIn_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAppointments/CheckInNoDataFoundFault" name="NoDataFoundFault" message="tns:IAppointments_CheckIn_NoDataFoundFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAppointments/CheckInAuthenticationFailureFault" name="AuthenticationFailureFault" message="tns:IAppointments_CheckIn_AuthenticationFailureFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAppointments/CheckInConnectionFailureFault" name="ConnectionFailureFault" message="tns:IAppointments_CheckIn_ConnectionFailureFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NoShow">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointments/NoShow" message="tns:IAppointments_NoShow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointments/NoShowResponse" message="tns:IAppointments_NoShow_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAppointments/NoShowAuthenticationFailureFault" name="AuthenticationFailureFault" message="tns:IAppointments_NoShow_AuthenticationFailureFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAppointments/NoShowConnectionFailureFault" name="ConnectionFailureFault" message="tns:IAppointments_NoShow_ConnectionFailureFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAppointments/NoShowNoDataFoundFault" name="NoDataFoundFault" message="tns:IAppointments_NoShow_NoDataFoundFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAppointments" type="tns:IAppointments">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAppointmentsForOLTIntegration">
+      <soap:operation soapAction="http://tempuri.org/IAppointments/GetAppointmentsForOLTIntegration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AuthenticationFailureFault">
+        <soap:fault use="literal" name="AuthenticationFailureFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ConnectionFailureFault">
+        <soap:fault use="literal" name="ConnectionFailureFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="NoDataFoundFault">
+        <soap:fault use="literal" name="NoDataFoundFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CheckIn">
+      <soap:operation soapAction="http://tempuri.org/IAppointments/CheckIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="NoDataFoundFault">
+        <soap:fault use="literal" name="NoDataFoundFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationFailureFault">
+        <soap:fault use="literal" name="AuthenticationFailureFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ConnectionFailureFault">
+        <soap:fault use="literal" name="ConnectionFailureFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NoShow">
+      <soap:operation soapAction="http://tempuri.org/IAppointments/NoShow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AuthenticationFailureFault">
+        <soap:fault use="literal" name="AuthenticationFailureFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ConnectionFailureFault">
+        <soap:fault use="literal" name="ConnectionFailureFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="NoDataFoundFault">
+        <soap:fault use="literal" name="NoDataFoundFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Appointments">
+    <wsdl:port name="BasicHttpBinding_IAppointments" binding="tns:BasicHttpBinding_IAppointments">
+      <soap:address location="http://localhost/OacIntegrationService/Appointments.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

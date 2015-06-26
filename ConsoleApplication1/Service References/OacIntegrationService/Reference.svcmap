@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="df9abd68-1b53-4834-ba0c-92e749285797" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+      <CollectionMapping TypeName="System.Collections.Generic.SortedList`2" Category="Dictionary" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/OacIntegrationService/Appointments.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Appointments.disco" MetadataType="Disco" ID="92bedfc6-8816-49ef-829a-ac9601f7fd4e" SourceId="1" SourceUrl="http://localhost/OacIntegrationService/Appointments.svc?disco" />
+    <MetadataFile FileName="Appointments.xsd" MetadataType="Schema" ID="4f3ac4ce-e3e5-414a-a1a1-8c34ce5ce746" SourceId="1" SourceUrl="http://localhost/OacIntegrationService/Appointments.svc?xsd=xsd1" />
+    <MetadataFile FileName="Appointments.wsdl" MetadataType="Wsdl" ID="d216ceb5-53e4-4454-ac61-de2187a54699" SourceId="1" SourceUrl="http://localhost/OacIntegrationService/Appointments.svc?wsdl" />
+    <MetadataFile FileName="Appointments1.xsd" MetadataType="Schema" ID="9012ed35-ffa6-4ddf-b487-58a4b1b1f8a3" SourceId="1" SourceUrl="http://localhost/OacIntegrationService/Appointments.svc?xsd=xsd3" />
+    <MetadataFile FileName="Appointments2.xsd" MetadataType="Schema" ID="318b265a-97a3-4a7a-8f8d-04acbdce3126" SourceId="1" SourceUrl="http://localhost/OacIntegrationService/Appointments.svc?xsd=xsd0" />
+    <MetadataFile FileName="Appointments3.xsd" MetadataType="Schema" ID="086b54e3-4974-4410-807f-26cbc2ee6eb8" SourceId="1" SourceUrl="http://localhost/OacIntegrationService/Appointments.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
